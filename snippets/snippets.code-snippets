@@ -1,0 +1,280 @@
+{
+    "Init CF":{
+        "prefix": "init",
+        "body":
+        [
+        "---",
+
+        "AWSTemplateFormatVersion: 2010-09-09",
+
+
+        "Description:$1 ",
+
+
+        "Metadata: ",
+
+
+        "Parameters: ",
+
+
+        "Rules: ",
+
+
+        "Mappings: ",
+
+
+        "Conditions: ",
+
+
+        "Transform: ",
+
+
+        "Resources: ",
+
+
+        "Outputs: ",
+
+        ]
+    },
+
+    "Mapping Key":{
+        "prefix": "keymapping",
+        "body":
+        [
+            "Mapping01:",
+                "\tKey01:",
+                    "\t\tName: Value",
+                "\tKey02:",
+                    "\t\tName: Value",
+                "\tKey03:",
+                    "\t\tName: Value",
+        ]
+    },
+
+    "Mapping Regions":{
+        "prefix": "regmapping",
+        "body":
+        [
+            "AZRegions:",
+                "us-east-1:",
+                    "AZs: [value,value]",
+                "us-east-2:",
+                    "AZs: [value,value]",
+                "us-west-1:",
+                    "AZs: [value,value]",
+                "us-west-2:",
+                    "AZs: [value,value]",
+                "af-south-1:",
+                    "AZs: [value,value]",
+                "ap-east-1:",
+                    "AZs: [value,value]",
+                "ap-southeast-3:",
+                    "AZs: [value,value]",
+                "ap-south-1:",
+                    "AZs: [value,value]",
+                "ap-northeast3:",
+                    "AZs: [value,value]",
+                "ap-northeast2:",
+                    "AZs: [value,value]",
+                "ap-southeast1:",
+                    "AZs: [value,value]",
+                "ap-southeast2:",
+                    "AZs: [value,value]",
+                "ap-northeast1:",
+                    "AZs: [value,value]",
+                "ca-central-1:",
+                    "AZs: [value,value]",
+                "eu-west-1:",
+                    "AZs: [value,value]",
+                "eu-west-2:",
+                    "AZs: [value,value]",
+                "eu-south-1:",
+                    "AZs: [value,value]",
+                "eu-west-3:",
+                   "AZs: [value,value]",
+                "eu-north-1:",
+                    "AZs: [value,value]",
+                "me-south-1:",
+                    "AZs: [value,value]",
+                "sa-east-1:",
+                    "AZs: [value,value]",
+        ]
+    },
+
+    "Mapping US Regions":{
+        "prefix": "regmappingus",
+        "body":
+        [
+            "AZRegions:",
+                "us-east-1:",
+                    "AZs: [value,value]",
+                "us-east-2:",
+                    "AZs: [value,value]",
+                "us-west-1:",
+                    "AZs: [value,value]",
+                "us-west-2:",
+                    "AZs: [value,value]"
+        ]
+    },
+
+    "Mapping AF Regions":{
+        "prefix": "regmappingaf",
+        "body":
+        [
+            "AZRegions:",
+                "af-south-1:",
+                    "AZs: [value,value]"
+        ]
+    },
+
+    "Mapping AP Regions":{
+        "prefix": "regmappingap",
+        "body":
+        [
+        "AZRegions:",
+            "ap-east-1:",
+                "AZs: [value,value]",
+            "ap-southeast-3:",
+                "AZs: [value,value]",
+            "ap-south-1:",
+                "AZs: [value,value]",
+            "ap-northeast3:",
+                "AZs: [value,value]",
+            "ap-northeast2:",
+                "AZs: [value,value]",
+            "ap-southeast1:",
+                "AZs: [value,value]",
+            "ap-southeast2:",
+                "AZs: [value,value]",
+            "ap-northeast1:",
+                "AZs: [value,value]"
+
+        ]
+    },
+
+    "Mapping EU Regions":{
+        "prefix": "regmappingeu",
+        "body":
+        [
+            "AZRegions:",
+                 "eu-west-1:",
+                    "AZs: [value,value]",
+                "eu-west-2:",
+                    "AZs: [value,value]",
+                "eu-south-1:",
+                    "AZs: [value,value]",
+                "eu-west-3:",
+                   "AZs: [value,value]",
+                "eu-north-1:",
+                    "AZs: [value,value]"
+        ]
+    },
+
+    "Mapping CA Regions":{
+        "prefix": "regmappingca",
+        "body":
+        [
+            "AZRegions:",
+                "ca-central-1:",
+                    "AZs: [value,value]",
+        ]
+    },
+
+    "Mapping ME Regions":{
+        "prefix": "regmappingme",
+        "body":
+        [
+            "AZRegions:",
+                "me-south-1:",
+                  "AZs: [value,value]",
+        ]
+    },
+
+    "Mapping SA Regions":{
+        "prefix": "regmappingsa",
+        "body":
+        [
+            "AZRegions:",
+                "sa-east-1:",
+                    "AZs: [value,value]",
+        ]
+    },
+
+    "VPC":{
+        "prefix": "VPC",
+        "body":
+        [
+            "VPC:",
+                "Type: 'AWS::EC2::VPC'",
+            "Properties:",
+                "EnableDnsSupport: 'true'",
+                "EnableDnsHostname: 'true'",
+            "Tags:",
+                "-",
+                    "Key:",
+                    "Value:",
+        ]
+    },
+
+
+    "Instance EC2":{
+        "prefix": "instanceec2",
+        "body":
+        [
+            "IstanceEc2:",
+                "Type:'AWS::EC2::Instance'",
+                "Properties:",
+                    "IstanceType:",
+
+                    "SecurityGroups:",
+
+                    "KeyName:",
+
+                    "ImageId:"
+        ]
+    },
+
+    "InstanceSecurityGroup":{
+        "prefix": "securitygroup",
+        "body":
+        [
+            "InstanceSecurityGroup:",
+                "Type:'AWS::EC2::SecurityGroup'",
+                "Properties:",
+                    "GroupDescription:$1"
+        ]
+    },
+
+    "Subnet":{
+        "prefix": "subnet",
+        "body":
+        [
+            "Subnet:",
+                "Type:'AWS::EC2::Subnet'",
+                "Properties:",
+                    "VPCId:",
+
+                    "CidrBlock:",
+
+                    "Tags:",
+                        "Key:",
+                        "Value:"
+
+        ]
+    },
+
+    "InternetGateway":{
+        "prefix": "gateway",
+        "body":
+        [
+            "InternetGateway:",
+                "Type:'AWS::EC2::InternetGateway'",
+                "Properties:",
+                    "Tags:",
+                       " Key:",
+                        "Value:",
+        ]
+    }
+
+
+}
